@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <title>Dev × Naina — No Special Occasion</title>
+  <meta name="description" content="A little corner of the internet made for Naina, for no special reason at all.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+<style id="v3-style">
+/* V3 — personal polish */
+.typing-memory{
+  margin:14px 0 0 42px; display:flex; align-items:center; gap:4px;
+  font-family:"DM Mono",monospace; font-size:10px; letter-spacing:.08em;
+  color:rgba(255,255,255,.34); opacity:0; transform:translateY(5px);
+  animation:typingMemory 1.2s .8s forwards;
+}
+.typing-memory i{width:3px;height:3px;border-radius:50%;background:#f0c4cb;animation:typingDots 1s infinite}
+.typing-memory i:nth-of-type(2){animation-delay:.15s}.typing-memory i:nth-of-type(3){animation-delay:.3s}
+@keyframes typingMemory{to{opacity:1;transform:none}}
+@keyframes typingDots{0%,100%{opacity:.25;transform:translateY(0)}50%{opacity:1;transform:translateY(-2px)}}
+
+.micro-confession{
+  max-width:620px; margin:42px auto 0; text-align:center;
+  font-family:"Cormorant Garamond",serif; font-size:26px; font-style:italic;
+  color:rgba(20,18,18,.65)
+}
+
+/* US section */
+.us-section{
+  position:relative; overflow:hidden; padding:130px 6vw 150px;
+  background:#09090b; color:#f4eee9;
+}
+.us-section:before{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:radial-gradient(circle at 50% 35%, rgba(226,113,132,.10), transparent 40%);
+}
+.us-inner{max-width:1050px;margin:0 auto;position:relative}
+.us-kicker{
+  font-family:"DM Mono",monospace; font-size:11px; letter-spacing:.25em;
+  color:rgba(244,238,233,.45); margin-bottom:34px;
+}
+.us-heading{display:flex;justify-content:space-between;gap:50px;align-items:flex-end}
+.us-heading h2{
+  margin:0; font-family:"Cormorant Garamond",serif; font-size:clamp(62px,8vw,108px);
+  line-height:.82; letter-spacing:-.055em; font-weight:500;
+}
+.us-heading h2 em{color:#f0b9c2}
+.us-heading p{
+  max-width:360px; margin:0 0 8px; color:rgba(244,238,233,.55);
+  font-size:14px; line-height:1.85;
+}
+.relationship-loop{
+  margin:85px auto 0; max-width:760px; display:flex; flex-direction:column; align-items:center;
+}
+.loop-card{
+  width:min(100%,620px); padding:25px 28px; border:1px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.025); display:grid; grid-template-columns:50px 1fr;
+  column-gap:15px; align-items:center; transition:transform .35s ease,border-color .35s ease,background .35s ease;
+}
+.loop-card:hover{transform:translateX(8px);border-color:rgba(240,185,194,.35);background:rgba(240,185,194,.035)}
+.loop-card span{grid-row:1/3;font:10px "DM Mono",monospace;color:#f0b9c2;letter-spacing:.15em}
+.loop-card b{font-size:14px;letter-spacing:.16em}
+.loop-card small{font-size:12px;color:rgba(244,238,233,.42);margin-top:6px}
+.loop-arrow{height:38px;display:flex;align-items:center;justify-content:center;color:rgba(240,185,194,.55);font-size:17px}
+.loop-final{border-color:rgba(240,185,194,.22);background:rgba(240,185,194,.045)}
+.us-bottom{text-align:center;margin-top:80px}
+.us-bottom span{display:block;font:10px "DM Mono",monospace;letter-spacing:.25em;color:rgba(244,238,233,.35)}
+.us-bottom strong{
+  display:block; margin:15px 0 5px; font-family:"Cormorant Garamond",serif;
+  font-size:64px; font-weight:400; color:#f0b9c2;
+}
+.us-bottom p{margin:0;color:rgba(244,238,233,.45);font-size:13px;letter-spacing:.08em}
+
+.secret-logo-pulse{animation:secretLogoPulse .7s ease}
+@keyframes secretLogoPulse{50%{transform:scale(1.16);color:#f0b9c2}}
+
+@media(max-width:760px){
+  .us-section{padding:95px 20px 110px}
+  .us-heading{display:block}
+  .us-heading h2{font-size:61px}
+  .us-heading p{margin-top:32px}
+  .relationship-loop{margin-top:55px}
+  .loop-card{padding:21px 20px}
+  .micro-confession{font-size:22px;padding:0 20px}
+}
+</style>
+
+
+<style id="mobile-first-v3">
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+body{-webkit-text-size-adjust:100%;overscroll-behavior-x:none}
+img{max-width:100%}
+button,a{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.mobile-tap-hint{display:none}
+@media (max-width:700px){
+  .cursor-dot,.cursor-ring{display:none!important}
+  .preloader{padding:24px}.loader-inner{width:100%;max-width:330px}
+  .loader-kicker{font-size:9px;letter-spacing:.22em}.loader-title{font-size:31px}.loader-status{font-size:9px}
+  .chapter-pill{left:10px!important;bottom:10px!important;max-width:54vw;white-space:nowrap;overflow:hidden}
+  .chapter-pill b{overflow:hidden;text-overflow:ellipsis}
+  .music-player{left:auto!important;right:10px!important;bottom:10px!important;width:min(64vw,270px);grid-template-columns:34px 1fr!important;padding:8px!important;border-radius:13px}
+  .music-player .music-time{display:none!important}.music-player .music-meta{grid-column:2!important;grid-row:1!important;min-width:0}
+  .music-meta b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.music-player button{grid-column:1!important;grid-row:1!important}
+  .hero{min-height:100svh!important;padding:92px 20px 92px!important}
+  .hero h1{font-size:clamp(50px,15vw,78px)!important;line-height:.88!important}
+  .hero p{max-width:310px!important;font-size:14px!important;line-height:1.75!important}
+  .manifesto,.timeline,.cinema,.notice,.gallery,.songs,.fight,.heart-section,.letter,.final{padding-left:18px!important;padding-right:18px!important}
+  .manifesto{padding-top:100px!important;padding-bottom:105px!important}
+  .manifesto h2,.timeline h2,.cinema h2,.letter h2,.final h2{font-size:clamp(43px,13vw,67px)!important;line-height:.93!important}
+  .manifesto p,.timeline p,.cinema p,.letter p{font-size:14px!important;line-height:1.8!important}
+  .notice-grid,.notices-grid{grid-template-columns:1fr!important;display:grid!important;gap:10px!important}
+  .notice-card{min-height:84px!important;padding:18px!important}.notice-card:active{transform:scale(.985)!important}
+  .micro-confession{font-size:23px!important;line-height:1.12!important;margin:34px auto 0!important}
+  .distance.section-light{padding:82px 0 98px!important}
+  .distance-top{padding:0 20px!important;margin-bottom:25px!important}
+  .distance-top h2{font-size:clamp(43px,13vw,58px)!important;line-height:.92!important}
+  .distance-lead{font-size:14px!important;line-height:1.75!important}
+  .distance-simple{display:grid!important;grid-template-columns:1fr!important;gap:10px!important;margin:34px 18px 35px!important;padding:30px 18px!important}
+  .distance-city{padding:8px 0!important}.distance-city .city-kicker{font-size:9px!important}.distance-city strong{font-size:39px!important}
+  .distance-connector{height:55px!important;transform:rotate(90deg)!important}.distance-connector span{font-size:21px!important}
+  .distance-connector small{font-size:8px!important}.distance-copy-new{margin:48px 20px 0!important;font-size:14px!important;line-height:1.8!important}
+  .distance-copy-new strong{font-size:29px!important;line-height:1.05!important}
+  .us-section{padding:92px 18px 105px!important}.us-kicker{font-size:9px!important}
+  .us-heading h2{font-size:clamp(56px,16vw,76px)!important;line-height:.83!important}
+  .us-heading p{font-size:13px!important;line-height:1.75!important;margin-top:28px!important}
+  .relationship-loop{margin-top:48px!important;width:100%!important}
+  .loop-card{width:100%!important;box-sizing:border-box!important;padding:19px 17px!important;grid-template-columns:40px 1fr!important}
+  .loop-card b{font-size:11px!important;letter-spacing:.13em!important}.loop-card small{font-size:11px!important;line-height:1.5!important}
+  .loop-arrow{height:28px!important}.us-bottom{margin-top:62px!important}.us-bottom strong{font-size:58px!important}
+  .gallery{padding-top:88px!important;padding-bottom:95px!important}
+  .gallery-item{margin-bottom:13px!important}.gallery-item img{width:100%!important;height:auto!important;max-height:78svh!important;object-fit:cover}
+  .song-card{margin-bottom:10px!important;padding:19px!important}.song-card:active{transform:scale(.99)!important}
+  .fight,.heart-section{padding-top:90px!important;padding-bottom:95px!important}
+  .fight h2,.heart-section h2{font-size:clamp(45px,13vw,68px)!important}.fight p,.heart-section p{font-size:14px!important;line-height:1.8!important}
+  .letter{padding-top:95px!important;padding-bottom:110px!important}.letter p{font-size:15px!important;line-height:1.9!important}
+  .final{min-height:100svh!important;padding-top:100px!important;padding-bottom:100px!important}
+  .final h2{font-size:clamp(48px,15vw,78px)!important}.final p{font-size:14px!important;line-height:1.8!important}
+  .modal-content,.note-modal-content,.lightbox-content{width:calc(100vw - 28px)!important;max-height:84svh!important}
+  #lightboxImg{max-height:72svh!important;width:auto!important;max-width:100%!important}
+  .mobile-tap-hint{position:fixed;left:50%;bottom:86px;transform:translateX(-50%);z-index:100;display:flex;flex-direction:column;align-items:center;gap:7px;color:rgba(255,255,255,.7);font:10px "DM Mono",monospace;letter-spacing:.18em;pointer-events:none;animation:mobileHint 2.2s ease-in-out infinite;text-align:center}
+  .mobile-tap-hint small{font-size:8px;letter-spacing:.08em;color:rgba(255,255,255,.35)}
+  .mobile-tap-hint.hide{opacity:0;transition:opacity .4s}
+}
+@keyframes mobileHint{50%{opacity:.45}}
+</style>
+
+</head>
+<body>
+<div class="mobile-tap-hint" id="mobileTapHint"><span>TAP TO ENTER</span><small>sound is better with headphones ♡</small></div>
+  <div id="preloader" class="preloader">
+    <div class="loader-inner">
+      <div class="loader-kicker">PRIVATE ARCHIVE / 2026</div>
+      <div class="loader-title">DEV <span>×</span> NAINA</div>
+      <div class="loader-line"><i></i></div>
+      <div class="loader-status" id="loaderStatus">Collecting memories…</div>
+    </div>
+  </div>
+
+  <audio id="bgMusic" preload="metadata" loop src="i-wanna-be-yours.mp3"></audio>
+  <div class="grain"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div class="progress"><span></span></div>
+  <div class="chapter-pill" id="chapterPill"><span>01</span><b>THE BEGINNING</b></div>
+  <div class="music-player" id="musicPlayer">
+    <button id="musicPlay" aria-label="Play music">▶</button>
+    <div class="music-meta"><span>NOW PLAYING</span><b>I Wanna Be Yours</b></div>
+    <div class="music-time"><span id="musicCurrent">0:00</span><i><em id="musicFill"></em></i><span id="musicDuration">0:00</span></div>
+  </div>
+
+  <header class="nav">
+    <a href="#top" class="brand">D<span>×</span>N</a>
+    <div class="nav-right">
+      <button class="sound-btn" id="soundBtn" aria-label="Toggle music"><span class="sound-dot"></span><span class="sound-label">SOUND</span></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open chapters"><b></b><b></b></button>
+    </div>
+  </header>
+
+  <aside class="chapter-menu" id="chapterMenu">
+    <div class="menu-head"><span>CHAPTERS</span><button id="closeMenu">CLOSE ×</button></div>
+    <a href="#beginning">01 — The beginning</a>
+    <a href="#one-year">02 — One year</a>
+    <a href="#first-meet">03 — Kolkata</a>
+    <a href="#little-things">04 — Things I notice</a>
+    <a href="#distance">06 — The distance</a>
+    <a href="#us">07 — Us, basically</a>
+    <a href="#archive">08 — The archive</a>
+    <a href="#songs">09 — The soundtrack</a>
+    <a href="#letter">10 — The thing I need to say</a>
+    <a href="#end">11 — No reason</a>
+  </aside>
+
+  <main id="top">
+    <section class="hero section-dark">
+      <div class="hero-orbit orbit-1"></div><div class="hero-orbit orbit-2"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">A PRIVATE WEBSITE FOR ONE PERSON</p>
+        <h1>There wasn't<br><em>a special occasion.</em></h1>
+        <p class="hero-sub">No birthday. No anniversary. No big announcement.<br>So… why is this here?</p>
+        <button class="enter-btn magnetic" data-scroll="#beginning">FIND OUT <span>↓</span></button>
+      </div>
+      <div class="hero-meta"><span>DEV / NAINA</span><span>04 YEARS</span><span>∞</span></div>
+    </section>
+
+    <section class="manifesto section-dark" id="beginning">
+      <div class="split reveal">
+        <div class="index">01</div>
+        <div>
+          <p class="eyebrow">THE BEGINNING</p>
+          <h2>It started with<br><em>one stupid reaction.</em></h2>
+          <p class="lead">You put something about Shakespeare on your Instagram story. I reacted with a laughing emoji or something equally stupid. You replied.</p>
+          <p class="body-copy">That reply was our first conversation. I don't think either of us knew that a random story reaction would turn into four years of calls, fights, laughter, distance, and somehow… us.</p>
+        </div>
+      </div>
+      <div class="ig-card reveal">
+        <div class="ig-top"><div class="ig-avatar">N</div><div><strong>Naina</strong><small>story · 4 years ago</small></div><span>•••</span></div>
+        <div class="ig-story"><div class="story-shine"></div><span>something about<br><b>SHAKESPEARE</b></span></div>
+        <div class="ig-reaction"><span>Dev reacted</span><strong>😂</strong></div>
+        <div class="ig-reply">Naina replied to your story.</div>
+        <div class="typing-memory"><span>Naina is typing…</span><i></i><i></i><i></i></div>
+        <div class="ig-foot">And that was it. <em>Or so we thought.</em></div>
+      </div>
+    </section>
+
+    <section class="timeline section-light" id="one-year">
+      <div class="section-head reveal"><p class="eyebrow">02 / BEFORE WE MET</p><h2>One year of<br><em>just talking.</em></h2><p>We didn't rush it. We talked. We gave each other time. We slowly learned the person behind the screen.</p></div>
+      <div class="timeline-track">
+        <div class="time-item reveal"><span>DAY 01</span><h3>First reply</h3><p>A story reaction became a conversation.</p></div>
+        <div class="time-item reveal"><span>MONTHS</span><h3>We kept talking</h3><p>Little updates. Long conversations. Learning each other.</p></div>
+        <div class="time-item reveal"><span>YEAR 01</span><h3>Then finally…</h3><p>It was time to meet the person who already felt familiar.</p></div>
+      </div>
+      <div class="quote reveal">“Some people become important in one moment.<br><em>You became important in every ordinary day.</em>”</div>
+    </section>
+
+    <section class="cinema section-dark" id="first-meet">
+      <div class="cinema-top reveal"><p class="eyebrow">03 / KOLKATA — CITY CENTRE, SALT LAKE</p><div class="location-line"><span>KOLKATA</span><span>FIRST MEETING</span></div></div>
+      <div class="ticket reveal">
+        <div class="ticket-left"><span class="ticket-label">ADMIT ONE</span><strong>DEV <i>×</i> NAINA</strong><small>CITY CENTRE · SALT LAKE</small></div>
+        <div class="ticket-mid"><span>MOVIE</span><b>TIGER 3</b><small>maybe. probably.</small></div>
+        <div class="ticket-code">D04<br>N04</div>
+      </div>
+      <div class="cinema-story reveal">
+        <div><p>First time seeing you in real life.</p><p>Honestly? Nothing dramatic happened in the first second. It was mostly awkward. We had only just become “us”, and suddenly we were actually standing next to each other.</p></div>
+        <div class="big-number">30<span>–40</span><small>minutes later</small></div>
+        <div><p>Then I held your hand.</p><p>And kissed it.</p><p class="muted">And somehow that tiny moment is still here.</p></div>
+      </div>
+      <div class="photo-wide reveal"><img src="photo-05.jpg" alt="Dev and Naina together" loading="lazy"><div class="photo-caption">THE FIRST YEARS / SOMEWHERE BETWEEN AWKWARD AND US</div></div>
+    </section>
+
+    <section class="notice section-light" id="little-things">
+      <div class="section-head reveal"><p class="eyebrow">04 / THE THINGS I NOTICE</p><h2>You probably don't<br><em>even realise I notice.</em></h2><p>But I do. The little things are the things that stayed.</p></div>
+      <div class="notice-grid">
+        <button class="notice-card reveal" data-note="Your eyes give you away. I can look at you once and usually know if something happened at home."><span>01</span><b>YOUR EYES</b><small>MOOD DETECTOR</small></button>
+        <button class="notice-card reveal" data-note="You yawn like a tiny zombie when you're sleepy. Yes, I noticed. Yes, it's cute."><span>02</span><b>THE ZOMBIE YAWN</b><small>WHEN YOU'RE SLEEPY</small></button>
+        <button class="notice-card reveal" data-note="When you're happy, you get over-excited. And somehow your happiness becomes mine too."><span>03</span><b>OVER-EXCITED YOU</b><small>WHEN YOU'RE HAPPY</small></button>
+        <button class="notice-card reveal" data-note="When you want me to agree, you make that sad-sad-cute face. It is unfair. It works every single time."><span>04</span><b>THAT FACE</b><small>THE ULTIMATE WEAPON</small></button>
+        <button class="notice-card reveal" data-note="You irritate me on purpose because you genuinely enjoy watching me react. And somehow I love that too."><span>05</span><b>YOUR ANNOYING SIDE</b><small>VERY CUTE. VERY ANNOYING.</small></button>
+        <button class="notice-card reveal" data-note="You send me your snap every day. It is such a small thing, but I notice when it happens. I always do."><span>06</span><b>THE DAILY SNAP</b><small>EVERY. SINGLE. DAY.</small></button>
+      </div>
+      <div class="note-modal" id="noteModal"><div class="note-inner"><span>DEV'S NOTE</span><button id="closeNote">×</button><p id="noteText"></p><small>you really thought I didn't notice?</small></div></div>
+    </section>
+
+    
+<section class="us-section section-dark" id="us">
+  <div class="us-inner">
+    <div class="us-kicker">07 / US, BASICALLY</div>
+    <div class="us-heading reveal">
+      <h2>We fight.<br><em>We love.</em><br>We repeat.</h2>
+      <p>Honestly, our relationship has never been especially peaceful. 😂<br>
+      But somehow, through every argument, every overthinking spiral, and every “last time”... you still stay.</p>
+    </div>
+
+    <div class="relationship-loop reveal">
+      <div class="loop-card"><span>01</span><b>WE FIGHT.</b><small>Sometimes over absolutely nothing.</small></div>
+      <div class="loop-arrow">↓</div>
+      <div class="loop-card"><span>02</span><b>I OVERTHINK.</b><small>More than I should.</small></div>
+      <div class="loop-arrow">↓</div>
+      <div class="loop-card"><span>03</span><b>YOU GET ANNOYED.</b><small>And I know exactly when it happens.</small></div>
+      <div class="loop-arrow">↓</div>
+      <div class="loop-card"><span>04</span><b>I SAY “LAST TIME.”</b><small>We both know what happens next.</small></div>
+      <div class="loop-arrow">↓</div>
+      <div class="loop-card loop-final"><span>05</span><b>YOU STILL STAY.</b><small>And that means more to me than I say.</small></div>
+    </div>
+
+    <div class="us-bottom reveal">
+      <span>RELATIONSHIP LOOP DETECTED</span>
+      <strong>∞</strong>
+      <p>Maybe that's our thing.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery section-dark" id="archive">
+      <div class="section-head reveal"><p class="eyebrow">05 / THE ARCHIVE</p><h2>Proof that<br><em>we were here.</em></h2><p>Not every picture needs a story. Some pictures are the story.</p></div>
+      <div class="archive-count"><span>15</span> PIECES OF US · TAP ANY PHOTO TO OPEN IT</div>
+      <div class="masonry" id="gallery">
+        <button class="gallery-item tall reveal"><img src="photo-01.jpg" alt="Naina" loading="lazy"><span>01 / HER</span></button>
+        <button class="gallery-item wide reveal"><img src="photo-02.jpg" alt="Dev and Naina outdoors" loading="lazy"><span>02 / US</span></button>
+        <button class="gallery-item reveal"><img src="photo-03.jpg" alt="Naina smiling" loading="lazy"><span>03 / THAT SMILE</span></button>
+        <button class="gallery-item reveal"><img src="photo-04.jpg" alt="Dev and Naina" loading="lazy"><span>04 / A DAY</span></button>
+        <button class="gallery-item tall reveal"><img src="photo-06.jpg" alt="Naina selfie" loading="lazy"><span>05 / HER WORLD</span></button>
+        <button class="gallery-item reveal"><img src="photo-07.jpg" alt="Naina portrait" loading="lazy"><span>06 / PRETTY</span></button>
+        <button class="gallery-item wide reveal"><img src="photo-08.jpg" alt="Naina outdoors" loading="lazy"><span>07 / HER</span></button>
+        <button class="gallery-item reveal"><img src="photo-09.jpg" alt="Dev and Naina" loading="lazy"><span>08 / US AGAIN</span></button>
+        <button class="gallery-item reveal"><img src="photo-10.jpg" alt="Dev and Naina" loading="lazy"><span>09 / A MEMORY</span></button>
+        <button class="gallery-item tall reveal"><img src="photo-11.jpg" alt="Naina closeup" loading="lazy"><span>10 / THOSE EYES</span></button>
+        <button class="gallery-item reveal"><img src="photo-12.jpg" alt="Dev and Naina" loading="lazy"><span>11 / TOGETHER</span></button>
+        <button class="gallery-item wide reveal"><img src="photo-14.jpg" alt="Dev and Naina" loading="lazy"><span>12 / US</span></button>
+        <button class="gallery-item reveal"><img src="photo-15.jpg" alt="Naina" loading="lazy"><span>13 / HER DAY</span></button>
+        <button class="gallery-item chat reveal"><img src="photo-13.jpg" alt="A message conversation" loading="lazy"><span>14 / WORDS</span></button>
+      </div>
+      <div class="lightbox" id="lightbox"><button id="lightboxClose">×</button><img id="lightboxImg" src="" alt="Expanded memory"><div id="lightboxLabel"></div></div>
+    </section>
+
+    <section class="distance section-light" id="distance">
+  <div class="distance-top reveal"><p class="eyebrow">06 / THE DISTANCE</p><h2>One meeting a year<br><em>isn't enough.</em></h2><p class="distance-lead">Surat to Kolkata. Different cities, different days — but somehow you still manage to be part of my everyday life.</p></div>
+  <div class="distance-simple reveal">
+    <div class="distance-city">
+      <span class="city-kicker">DEV</span>
+      <strong>SURAT</strong>
+    </div>
+    <div class="distance-connector"><span>♡</span><small>~1,600 KM APART</small></div>
+    <div class="distance-city">
+      <span class="city-kicker">NAINA</span>
+      <strong>KOLKATA</strong>
+    </div>
+  </div>
+  <div class="distance-copy-new reveal"><p>Video calls. Daily snaps. Tiny updates.</p><p>And somehow, I can still tell when something is wrong just by looking at you.</p><strong>Distance never made you feel far.</strong></div>
+  <div class="call-card reveal"><span>INCOMING VIDEO CALL</span><strong>Naina</strong><small>“Dev ya baby?”</small><button data-scroll="#songs">ANSWER →</button></div>
+</section>
+
+    <section class="songs section-dark" id="songs">
+      <div class="section-head reveal"><p class="eyebrow">07 / IF I HAD TO MAKE YOU A SOUNDTRACK</p><h2>It wouldn't be<br><em>just one song.</em></h2></div>
+      <div class="records">
+        <button class="record reveal" id="songIWBYou"><span>01</span><strong>I Wanna Be Yours</strong><small>tap to play · because… you know.</small></button>
+        <button class="record reveal"><span>02</span><strong>Perfect</strong><small>for the obvious reasons.</small></button>
+        <button class="record reveal"><span>03</span><strong>Paaro</strong><small>some feelings don't need explaining.</small></button>
+        <button class="record reveal"><span>04</span><strong>Darkhaast</strong><small>the one that stays a little longer.</small></button>
+      </div>
+      <p class="song-note reveal">The first song actually lives here now. Use the SOUND button anytime, or tap the record above. The other three are little clues to the playlist in my head.</p>
+    </section>
+
+    <section class="fight section-light">
+      <div class="fight-inner reveal"><p class="eyebrow">08 / A SMALL PROBLEM</p><h2>We fight.</h2><div class="fight-meter"><div class="meter-line"><i></i></div><span>ARGUMENT COUNTER</span><b>∞</b></div><p>Actually, we fight like idiots. 😂<br>And I somehow manage to stretch arguments longer than I should.</p><p>But here's the part I don't want to joke about:</p><strong>You still stay.</strong></div>
+    </section>
+
+    <section class="heart-section section-dark">
+      <div class="heart-copy reveal"><p class="eyebrow">09 / THE PART I DON'T SAY ENOUGH</p><h2>You're not one<br>special moment.</h2><p>You're the part of my life that makes ordinary days feel different.</p><div class="qualities"><span>EXTRA CARING</span><span>LOVING AURA</span><span>SWEET + SMART</span><span>ALWAYS CHECKING IN</span><span>MY FAVOURITE FACE</span></div></div>
+      <div class="heart-orb" aria-hidden="true"><div class="pulse-heart">♥</div><small>4 YEARS<br>AND COUNTING</small></div>
+    </section>
+
+    <section class="letter section-light" id="letter">
+      <div class="letter-wrap reveal"><p class="eyebrow">10 / THE THING I NEED TO SAY</p><h2>I'm sorry I haven't<br><em>always kept my promises.</em></h2>
+        <div class="letter-text">
+          <p>I know I say I won't argue, and then sometimes I do it again. I know I overthink things. I know I get jealous. I know I can be very sensitive when it comes to you.</p>
+          <p>And I'm sorry for the times I make something bigger than it needs to be.</p>
+          <p>Sometimes I don't even understand what happens to me in that moment. I just get scared. Scared of losing you. Because when it comes to you, I care more than I know how to explain.</p>
+          <p>I don't always show it properly. I don't always say it enough. But you are such a huge part of my life that the thought of not having you in it genuinely scares me.</p>
+          <p>So yes, I still have things I need to improve. And I know saying “next time I won't” isn't enough. I want my actions to eventually say it for me.</p>
+          <p class="signature">Please forgive me.<br><strong>I love you very, very much.</strong><br>And I never want to lose you.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final section-dark" id="end">
+      <div class="final-stars"></div>
+      <div class="final-copy reveal"><p class="eyebrow">THERE WAS NO REASON</p><h2>Naina,</h2><p class="final-lead">I didn't make this because today was special.</p><p class="final-lead">I made it because <em>you are.</em></p><div class="final-rule"></div><p class="final-small">Four years.<br>Countless calls.<br>Too many arguments.<br>One extremely annoying, incredibly cute girl.<br><br>And one person I never want to lose.</p><p class="final-hint">Take your time. There is no reason to rush this.</p><button class="secret-btn" id="secretBtn">ONE LAST THING →</button></div>
+      <div class="secret-reveal" id="secretReveal"><p>In case I don't say it enough…</p><strong>I LOVE YOU, NAINA.</strong><span>— Dev</span><button id="closeSecret">×</button></div>
+    </section>
+  </main>
+
+  <footer class="footer"><span>MADE WITH TOO MANY FEELINGS</span><span>DEV × NAINA</span><span>2026</span></footer>
+
+  <script src="script.js"></script>
+
+<script id="v3-script">
+(() => {
+  const brand = document.querySelector('.brand');
+  if (!brand) return;
+  let taps = 0, timer = null;
+  brand.addEventListener('click', (e) => {
+    taps++;
+    brand.classList.add('secret-logo-pulse');
+    setTimeout(()=>brand.classList.remove('secret-logo-pulse'),700);
+    clearTimeout(timer);
+    timer = setTimeout(()=>{ taps=0; }, 900);
+    if (taps === 3) {
+      taps = 0;
+      const toast = document.createElement('div');
+      toast.className = 'v3-secret-toast';
+      toast.textContent = 'PRIVATE FILE UNLOCKED — You found it. ❤️';
+      Object.assign(toast.style,{
+        position:'fixed',left:'50%',bottom:'34px',transform:'translateX(-50%)',
+        zIndex:'9999',padding:'14px 18px',border:'1px solid rgba(255,255,255,.15)',
+        background:'rgba(12,12,14,.94)',color:'#f5e9e9',font:'11px "DM Mono",monospace',
+        letterSpacing:'.08em',boxShadow:'0 20px 60px rgba(0,0,0,.4)',borderRadius:'999px',
+        opacity:'0',transition:'opacity .3s ease'
+      });
+      document.body.appendChild(toast);
+      requestAnimationFrame(()=>toast.style.opacity='1');
+      setTimeout(()=>{toast.style.opacity='0';setTimeout(()=>toast.remove(),350)},2600);
+    }
+  });
+})();
+</script>
+
+
+<script id="mobile-v3-script">
+(()=>{const h=document.getElementById('mobileTapHint'),m=document.getElementById('bgMusic');
+if(matchMedia('(max-width:700px)').matches){let done=false;const enter=async()=>{if(done)return;done=true;h?.classList.add('hide');try{await m.play();document.getElementById('soundBtn')?.classList.add('active')}catch(e){}setTimeout(()=>h?.remove(),500)};
+window.addEventListener('touchstart',enter,{once:true,passive:true});window.addEventListener('pointerdown',enter,{once:true,passive:true})}})();
+</script>
+
+</body>
+</html>
